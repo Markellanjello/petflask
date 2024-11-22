@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block title %}
+Создание статьи
+{% endblock%}
+{% block content %}
+<h1>Создать статью</h1>
+<form method="post">
+    <input type="text" name="title" id="title" class="form-control" placeholder="Название"><br>
+    <textarea name="intro" id="intro" class="form-control" placeholder="Описание"></textarea><br>
+    <textarea name="text" id="text" class="form-control" placeholder="Текст"></textarea><br>
+    <input type="submit" value="Отправить" class="btn btn-success"><br>
+</form>
+{% endblock %}

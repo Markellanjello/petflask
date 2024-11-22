@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block title %}
+Главная
+{% endblock%}
+{% block content %}
+<h1>Главная страница</h1>
+{% for el in articles %}
+    <div class="alert alert-info">
+        <h2>{{ el.title }}</h2>
+        <p>{{ el.intro }}</p>
+        <p><b>Дата: {{ el.date.date() }}</b></p>
+        <a href="/{{ el.id }}" class="btn btn-warning">Детальнее</a>
+    </div>
+{% endfor %}
+{% endblock %}
